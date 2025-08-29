@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerAttackAbility : Ability<PlayerController>
+public class EnemyAttackAbility : Ability<EnemyController>
 {
     [SerializeField]
     private Arrow _arrowPrefab;
@@ -28,9 +28,9 @@ public class PlayerAttackAbility : Ability<PlayerController>
 
     private void Shoot()
     {
-        if(_shootTimer <= 0 && _rigidbody.linearVelocityX == 0)
+        if (_shootTimer <= 0 && _rigidbody.linearVelocityX == 0)
         {
-            if(_target == null && !TryFindTarget())
+            if (_target == null && !TryFindTarget())
             {
                 return;
             }
@@ -47,8 +47,8 @@ public class PlayerAttackAbility : Ability<PlayerController>
 
     private bool TryFindTarget()
     {
-        _target = GameObject.FindGameObjectWithTag("Enemy");
-        if(_target == null)
+        _target = GameObject.FindGameObjectWithTag("Player");
+        if (_target == null)
         {
             return false;
         }
