@@ -28,6 +28,6 @@ public class Controller<TSelf> : MonoBehaviour where TSelf : Controller<TSelf>
             _abilityDict[type] = ability;
             return ability as TAbility;
         }
-        throw new Exception($"어빌리티 {type.Name}을 찾을 수 없습니다.");
+        return null;
     }
 }
