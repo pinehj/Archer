@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMoveAbility : Ability<PlayerController>
 {
     private Rigidbody2D _rigidbody;

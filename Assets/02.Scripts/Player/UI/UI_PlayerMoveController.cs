@@ -13,7 +13,17 @@ public class UI_PlayerMoveController : MonoBehaviour
         _moveLeftButton.OnDataChanged += UpdateInput;
         _moveRightButton.OnDataChanged += UpdateInput;
     }
-
+    private void OnDestroy()
+    {
+        if (_moveLeftButton != null)
+        {
+            _moveLeftButton.OnDataChanged -= UpdateInput;
+        }
+        if (_moveRightButton != null)
+        {
+            _moveRightButton.OnDataChanged -= UpdateInput;
+        }
+    }
     private void UpdateInput()
     {
         int totalInput = _moveLeftButton.CurrentValue + _moveRightButton.CurrentValue;
