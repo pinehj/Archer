@@ -22,7 +22,7 @@ public class EnemyMoveAbility : Ability<EnemyController>
     }
     private void FixedUpdate()
     {
-        _rigidbody.linearVelocityX =  _direction * _moveSpeed * Time.fixedDeltaTime;
+        _rigidbody.linearVelocityX = _direction * _moveSpeed;
     }
 
     private void ChangeDirection()
