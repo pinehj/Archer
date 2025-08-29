@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerHealthAbility : Ability<PlayerController>, IDamageable
+public class HealthAbility : Ability, IDamageable
 {
     [SerializeField]
     private int _currentHealth;

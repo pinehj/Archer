@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyMoveAbility : Ability<EnemyController>
+public class AutoMoveAbility : Ability
 {
     private Rigidbody2D _rigidbody;
     [SerializeField]

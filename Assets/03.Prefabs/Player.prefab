@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3526360029686229410}
   - component: {fileID: 2303220357934817962}
   - component: {fileID: 511827055902716075}
+  - component: {fileID: 5301801163738318755}
   m_Layer: 0
   m_Name: Abilities
   m_TagString: Untagged
@@ -58,11 +59,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63dc6aecd27d0a942b05e6e29ed75efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetTag: Enemy
   _arrowPrefab: {fileID: 6449393914787976207, guid: f988df6ea5c9bf245bb0a0c033459f58, type: 3}
   _shootInterval: 0.75
   _shootPos: {fileID: 8110998011516333478}
   _arrowSpeed: 5
+  _arrowDamage: 10
   _arrowYOffset: 6
+--- !u!114 &5301801163738318755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990136541971641177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9f76b10ec720c4797e18e39e555996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHealth: 0
+  _maxHealth: 100
 --- !u!1 &4195962946527370300
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 53349261016276899}
-  - component: {fileID: 2724197049799423153}
+  - component: {fileID: 2337794731007557041}
   - component: {fileID: 7485447094757500833}
   - component: {fileID: 5426757166132805767}
   m_Layer: 6
@@ -100,7 +117,7 @@ Transform:
   - {fileID: 8110998011516333478}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2724197049799423153
+--- !u!114 &2337794731007557041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +126,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4195962946527370300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b25fc852b4cb0214bbf7aa7b9e22c2ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e38c2730ec4e3543bc753b7d39be893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!70 &7485447094757500833

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMoveAbility : Ability<PlayerController>
+public class ManualMoveAbility : Ability
 {
     private Rigidbody2D _rigidbody;
     [SerializeField]
