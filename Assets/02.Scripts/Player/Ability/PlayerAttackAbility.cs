@@ -12,6 +12,8 @@ public class PlayerAttackAbility : Ability<PlayerController>
     [SerializeField]
     private float _arrowSpeed;
     [SerializeField]
+    private int _arrowDamage;
+    [SerializeField]
     private float _arrowYOffset;
     private Rigidbody2D _rigidbody;
 
@@ -37,7 +39,7 @@ public class PlayerAttackAbility : Ability<PlayerController>
 
             _shootTimer = _shootInterval;
             Arrow arrow = Instantiate(_arrowPrefab, _shootPos.position, Quaternion.identity);
-            arrow.InitArrow(_target.transform.position, _arrowSpeed, _arrowYOffset);
+            arrow.InitArrow(_target.transform.position, _arrowSpeed, _arrowDamage, _arrowYOffset);
         }
         else
         {

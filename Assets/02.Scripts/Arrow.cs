@@ -8,6 +8,7 @@ public class Arrow : MonoBehaviour
 
     private float _yOffset;
     private float _speed;
+    private int _damage;
     private float _moveProgress;
     private Rigidbody2D _rigidbody;
 
@@ -31,15 +32,25 @@ public class Arrow : MonoBehaviour
     {
         if (((1 << collision.gameObject.layer) & _targetLayerMask.value) != 0)
         {
+            IDamageable damageable = collision.GetComponentInChildren<IDamageable>();
+            if (damageable != null)
+            {
+                damageable.TakeDamage(
+                    new Damage()
+                    {
+                        Value = _damage
+                    });
+            }
             Destroy(gameObject);
         }
     }
 
-    public void InitArrow(Vector2 targetPos, float speed, float yOffset)
+    public void InitArrow(Vector2 targetPos, float speed, int damage,  float yOffset)
     {
         _startPos = transform.position;
         _targetPos = targetPos;
         _speed = speed / (_targetPos - _startPos).magnitude;
+        _damage = damage;
         _yOffset = yOffset;
     }
 }
