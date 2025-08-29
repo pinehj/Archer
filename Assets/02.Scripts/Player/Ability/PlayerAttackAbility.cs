@@ -13,13 +13,13 @@ public class PlayerAttackAbility : Ability<PlayerController>
     private float _arrowSpeed;
     [SerializeField]
     private float _arrowYOffset;
-    private Rigidbody2D _rigidbdoy;
+    private Rigidbody2D _rigidbody;
 
     private GameObject _target;
 
     private void Start()
     {
-        _rigidbdoy = _controller.Rigidbody;
+        _rigidbody = _controller.Rigidbody;
     }
     private void FixedUpdate()
     {
@@ -28,7 +28,7 @@ public class PlayerAttackAbility : Ability<PlayerController>
 
     private void Shoot()
     {
-        if(_shootTimer <= 0 && _rigidbdoy.linearVelocityX == 0)
+        if(_shootTimer <= 0 && _rigidbody.linearVelocityX == 0)
         {
             if(_target == null && !TryFindTarget())
             {
@@ -41,7 +41,7 @@ public class PlayerAttackAbility : Ability<PlayerController>
         }
         else
         {
-            _shootTimer -= Time.deltaTime;
+            _shootTimer -= Time.fixedDeltaTime;
         }
     }
 
