@@ -12,6 +12,6 @@ public class PlayerMoveAbility : Ability<PlayerController>
     }
     private void FixedUpdate()
     {
-        _rigidbody.linearVelocityX = InputManager.Instance.MoveInput * _moveSpeed * Time.deltaTime;
+        _rigidbody.linearVelocityX = InputManager.Instance.MoveInput * _moveSpeed * Time.fixedDeltaTime;
     }
 }

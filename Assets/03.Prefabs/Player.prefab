@@ -61,8 +61,8 @@ MonoBehaviour:
   _arrowPrefab: {fileID: 6449393914787976207, guid: f988df6ea5c9bf245bb0a0c033459f58, type: 3}
   _shootInterval: 0.75
   _shootPos: {fileID: 8110998011516333478}
-  _arrowSpeed: 0.2
-  _arrowYOffset: 7
+  _arrowSpeed: 5
+  _arrowYOffset: 6
 --- !u!1 &4195962946527370300
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,9 +75,9 @@ GameObject:
   - component: {fileID: 2724197049799423153}
   - component: {fileID: 7485447094757500833}
   - component: {fileID: 5426757166132805767}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
