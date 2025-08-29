@@ -1,11 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class Ability<TController> : MonoBehaviour where TController : Controller<TController>
+public class Ability : MonoBehaviour
 {
-    protected TController _controller;
+    protected Controller _controller;
 
     protected virtual void Awake()
     {
-        _controller = GetComponentInParent<TController>();
+        _controller = GetComponentInParent<Controller>();
     }
 }
